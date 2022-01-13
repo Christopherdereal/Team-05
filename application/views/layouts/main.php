@@ -22,7 +22,8 @@
             </p>
             <ul class="nav">
               <li><a href="<?php echo base_url(); ?>">Tasks</a></li>
-               <?php if($this->session->userdata('logged_in')) : ?> 
+               <?php if($this->session->userdata('logged_in')) : ?>
+                    <li><a href="<?php echo base_url(); ?>lists">Monitoring</a></li> 
                <?php endif; ?>
             </ul>
           </div><!--/.nav-collapse -->
