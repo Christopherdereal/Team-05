@@ -80,7 +80,8 @@ padding-bottom: 7px;
               <li><a href="<?php echo base_url(); ?>">Tasks</a></li>
                <?php if($this->session->userdata('logged_in')) : ?>
                     <li><a href="<?php echo base_url(); ?>lists">Monitoring</a></li>
-                    <li><a href="<?php echo base_url(); ?>Mycal">Calendar</a></li>  
+                    <li><a href="<?php echo base_url(); ?>Mycal">Calendar</a></li>
+                    <li><a href="<?php echo base_url(); ?>user/update_password">Account Settings</a></li>  
                <?php endif; ?>
             </ul>
             </div><!--/.nav-collapse -->
