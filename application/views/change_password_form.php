@@ -3,6 +3,17 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: black;
+}
 .box
    {
     width:750px;
@@ -10,25 +21,6 @@
     background-color:#fff;
     border:1px solid #ccc;
     border-radius:5px;
-   }
-   input[type="checkbox"]
-   {
-    top: 40px;
-    right: 100px;
-    cursor: pointer;
-    -webkit-appearance: none;
-   }
-   input[type="checkbox"]:before
-   {
-    content: 'Dark';
-    position: absolute;
-    color: #fff;
-    background: #000;
-    padding:  10px 20px;
-   }
-   input[type="checkbox"]:checked ~ *
-   {
-   filter: invert(1);
    }
 </style>
 <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
@@ -73,15 +65,19 @@
         </div><!--/span-->
 
         <div class="span9">
-  <h1>Account Settings</h1>
+  <h1 style="color:blue">Account Settings</h1>
 </head>
 <body>
-  <h2>Change Theme Type</h2>
-  <input type="checkbox"  name="">
-  <br />
-  <br />
-  <br />
-<h2>Change Password</h2>
+  <h2 style="color:blue">Change Theme Type</h2>
+  <button onclick="myFunction()" class="btn btn-info" >Dark mode</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+<h2 style="color:blue">Change Password</h2>
 <div><?php echo validation_errors() ?>
 <?php if(isset($message)){
   echo $message;
@@ -122,7 +118,7 @@
     </div>
   </form>
 </div> 
-         <h2>Change Ringtone Type</h2>
+         <h2 style="color:blue">Change Ringtone Type</h2>
          <div class="container box">
          <h4>Please Select a Ringtone</h4><br />  
          <form>
@@ -173,7 +169,7 @@
         }
     </script>
 </div>
-<h2>Change Font Type</h2>
+<h2 style="color:blue">Change Font Type</h2>
 <div class="container box">
   <title>Android Task Monitoring</title>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
