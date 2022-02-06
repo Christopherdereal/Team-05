@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Calendar</title>
+	<title>Android Task Monitoring</title>
 <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/custom.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>

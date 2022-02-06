@@ -24,14 +24,14 @@
 				
 			
 				$this->session->unset_userdata('id');
-				redirect('home/index');
+				redirect('users/logout');
 			}
 
 			public function change_password(){
 				if($this->session->has_userdata('id')){
 					$this->load->view('change_password_form');
 				}else{
-					redirect('home/index');
+					redirect('users/logout');
 				}
 			}
 

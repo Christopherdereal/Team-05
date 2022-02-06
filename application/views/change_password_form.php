@@ -128,44 +128,76 @@
          <form>
 <table>
     <tr>
-        <td><input type="radio" name="ringtone[]" value="Ringtone 1" />  Ringtone 1</td>
+        <td><input type="radio" name="ringtone[]" value="Ringtone 1" id="Ringtone 1" />  Ringtone 1</td>
         <td><a href="https://drive.google.com/file/d/1Kq35qFHsXarXSALIn4clnocyR8RaD9Yi/view?usp=sharing">Listen</a></td>
     </tr>
     <tr>
-        <td><input type="radio" name="ringtone[]" value="Ringtone 2" /> Ringtone 2</td>
+        <td><input type="radio" name="ringtone[]" value="Ringtone 2" id="Ringtone 2" /> Ringtone 2</td>
         <td><a href="https://drive.google.com/file/d/1HQ3UKVm-L_LGYktQXGd8ZVvzp4RhoHI7/view?usp=sharing">Listen</a></td>
     </tr>
     <tr>
-        <td><input type="radio" name="ringtone[]" value="Ringtone 3" /> Ringtone 3</td>
+        <td><input type="radio" name="ringtone[]" value="Ringtone 3" id="Ringtone 3" /> Ringtone 3</td>
         <td><a href="https://drive.google.com/file/d/1KjmG7gNpMlH7AnixAscDNpZrvN9dEdh5/view?usp=sharing">Listen</a></td>
     </tr>
 </table>
  <br />
-<p><input type="submit" name="submit" class="btn btn-info" value="Update" /></p>
+<button type="button" onclick="display()" class="btn btn-info">
+            Update
+        </button>
 </form>
+<div id="disp" style=
+        "color:green; font-size:18px; font-weight:bold;">
+    </div> 
+</body> 
+    <script>
+        function display() { 
+            if(document.getElementById('Ringtone 1').checked) {
+                document.getElementById("disp").innerHTML
+                    = document.getElementById("Ringtone 1").value
+                    + " is now your default ringtone";
+            }
+            else if(document.getElementById('Ringtone 2').checked) {
+                document.getElementById("disp").innerHTML
+                    = document.getElementById("Ringtone 2").value
+                    + " is now your default ringtone";  
+            }
+            else if(document.getElementById('Ringtone 3').checked) {
+                document.getElementById("disp").innerHTML
+                    = document.getElementById("Ringtone 3").value
+                    + " is now your default ringtone";  
+            }
+            else {
+                document.getElementById("disp").innerHTML
+                    = "Please select a ringtone type";
+            }
+        }
+    </script>
 </div>
 <h2>Change Font Type</h2>
 <div class="container box">
-  <h4>Please Select a Font</h4><br /> 
-  <form>
-   <table>
-    <tr>
-        <td><input type="radio" name="font[]" value="Font Type 1" />  Open Sans</td>
-    </tr>
-    <tr>
-        <td><input type="radio" name="font[]" value="Font Type 2" /> Roboto</td>
-    </tr>
-    <tr>
-        <td><input type="radio" name="font[]" value="Font Type 3" /> Lato</td>
-    </tr>
-    <tr>
-        <td><input type="radio" name="font[]" value="Font Type 4" /> Helvetica</td>
-    </tr>
-</table>
-  <br />
-  <p><input type="submit" name="submit" class="btn btn-info" value="Update" /></p>
-  <br />
-  </form>
+  <title>Android Task Monitoring</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("input[type='button']").click(function(){
+            var radioValue = $("input[name='Font']:checked").val();
+            if(radioValue){
+                alert("Your default font is now : " + radioValue);
+            }
+        });
+    });
+</script>
+</head> 
+<body>
+    <h4>Please Select a Font</h4><br /> 
+    <p> 
+        <label><input type="radio" name="Font" value="Open Sans">  Open Sans</label> 
+        <label><input type="radio" name="Font" value="Roboto">  Roboto</label>
+        <label><input type="radio" name="Font" value="Lato">  Lato</label> 
+        <label><input type="radio" name="Font" value="Helvetica"> Helvetica</label>
+    </p>
+    <br />
+    <p><input type="button" value="Update" class="btn btn-info"></p>
 </div><!--/row-->
       <hr>
 
